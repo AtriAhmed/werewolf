@@ -37,6 +37,6 @@ export default function Navbar() {
     }, [window.location.pathname])
 
     return (
-        <nav className='bg-blue-900 text-white font-bold flex p-5'>{pageData.backBtn ? <button onClick={() => navigate(-1)}><IonIcon icon={arrowBack} className="text-xl" /></button> : ""}<div className='flex justify-center w-full'>{pageData?.title}</div></nav>
+        <nav className='bg-blue-900 text-white font-bold flex p-5 fixed w-full z-10'>{pageData.backBtn ? <button onClick={() => navigate(-1)}><IonIcon icon={arrowBack} className="text-xl" /></button> : ""}<div className='flex justify-center w-full'>{pageData?.title}</div></nav>
     )
 }

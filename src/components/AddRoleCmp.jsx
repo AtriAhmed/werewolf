@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../../db';
 import { debounce } from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
+import Role from './Role';
 
 export default function AddRoleCmp() {
 
@@ -43,6 +44,6 @@ export default function AddRoleCmp() {
     }
 
     return (
-        <div>{roles?.map((role, index) => <div className='' key={index}><div>{role.name}</div>{canAdd(role) ? <button className='text-xl' onClick={() => addRole(role)}>+</button> : <></>} </div>)}</div>
+        <div className='grid grid-cols-12'>{roles?.map((role, index) => <Role role={role} buttonType={canAdd(role) ? "add" : ""} addRole={()=>addRole(role)}  />)}</div>
     )
 }

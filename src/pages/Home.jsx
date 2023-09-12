@@ -25,7 +25,7 @@ export default function Home() {
     }
 
     return (
-        <div className='flex justify-center items-center h-[75vh]'>
+        <div className='flex justify-center items-center h-[100vh]'>
             <div className='flex flex-col items-center justify-center gap-10'>
                 <input placeholder='Players Number (7 minimum)' type="text" className='bg-transparent text-xl text-center outline-none text-white font-bold' onChange={handleChange} />
                 <button className='text-xl font-bold bg-white w-[50%] py-2 rounded' onClick={startGame}>START</button>

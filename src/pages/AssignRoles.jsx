@@ -52,19 +52,24 @@ export default function AssignRoles() {
 
     if (currentRole == mixedRoles?.length) return <div>ended</div>
     return (
-        <div>
-            <Role role={mixedRoles ? mixedRoles[currentRole] : {}} hidden={!visible} />
-            <div>
-                <input placeholder='Player Name' type='text' name='name' onChange={(e) => setPlayerName(e.target.value)} value={playerName} />
+        <div className='h-[100vh]'>
+            <div className='flex flex-col gap-4 justify-center items-center h-full'>
+            
+            <Role role={mixedRoles ? mixedRoles[currentRole] : {}} hidden={!visible} imgWidth={300} imgHeight={300} fontSize="xl"/>
+              
+                
+            <div className='flex justify-center items-center'>
+                <input placeholder='Player Name' type='text' name='name' className='p-2' onChange={(e) => setPlayerName(e.target.value)} value={playerName} />
+            </div>
             </div>
             <footer className="fixed bottom-0 w-full h-16 bg-blue-700">
                 <div className="flex justify-around items-center h-full">
-                    <button className="flex flex-col items-center text-center" onClick={() => setVisible(!visible)}>
+                    <button className="flex flex-col items-center text-center bg-blue-400 rounded-full p-2" onClick={() => setVisible(!visible)}>
                         <IonIcon icon={visible ? eyeOffOutline : eyeOutline} className='h-6 w-6 text-white' />
                     </button>
 
-                    <button onClick={next} disabled={!playerName || !visible} className="flex flex-col items-center text-center">
-                        <IonIcon icon={arrowForward} className={`h-6 w-6 ${!playerName || !visible ? 'text-gray-200 cursor-auto' : 'text-green-500'}`} />
+                    <button onClick={next} disabled={!playerName || !visible} className={`flex flex-col items-center text-center rounded-full p-2 text-white ${!playerName || !visible ? 'bg-gray-200 cursor-auto' : 'bg-green-500'}`}>
+                        <IonIcon icon={arrowForward} className={`h-6 w-6 `} />
                     </button>
                 </div>
             </footer>

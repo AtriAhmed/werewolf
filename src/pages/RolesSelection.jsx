@@ -4,7 +4,7 @@ import { db } from '../../db';
 import AddRoleModal from '../components/AddRoleModal';
 import { Link } from 'react-router-dom';
 import { IonIcon } from '@ionic/react';
-import { addOutline, arrowForward } from 'ionicons/icons';
+import { add, addOutline, arrowForward } from 'ionicons/icons';
 import Role from '../components/Role';
 
 export default function RolesSelection() {
@@ -20,18 +20,18 @@ export default function RolesSelection() {
 
     return (
         <>
-            <div className='grid grid-cols-12 gap-4'>
-                {selectedRoles?.map((role) => <Role key={role.id} role={role} del={true} />)}
+            <div className='grid grid-cols-12 gap-4 py-[80px] px-5'>
+                {selectedRoles?.map((role) => <Role key={role.id} role={role} buttonType={"delete"} />)}
             </div>
             <AddRoleModal show={modalShow} hide={() => { setModalShow(false); }} />
             <footer className="fixed bottom-0 w-full h-16 bg-blue-700">
                 <div className="flex justify-around items-center h-full">
-                    <button className="flex flex-col items-center text-center" onClick={() => setModalShow(true)}>
-                        <IonIcon icon={addOutline} className='h-6 w-6 text-white' />
+                    <button className="flex flex-col items-center text-center bg-blue-500 rounded-full p-2" onClick={() => setModalShow(true)}>
+                        <IonIcon icon={add} className='h-6 w-6 text-white' />
                     </button>
-                    <div className='text-white font-bold'>{selectedRoles?.length}</div>
-                    <Link to={selectedRoles?.length > 6 ? "/assign-roles" : "#"} className="flex flex-col items-center text-center">
-                        <IonIcon icon={arrowForward} className={`h-6 w-6 ${selectedRoles?.length > 6 ? 'text-green-500' : 'text-gray-200 cursor-auto'}`} />
+                    <div className='bg-white rounded-full p-2 font-bold text-blue-700 w-[40px] h-[40px] flex items-center justify-center'>{selectedRoles?.length}</div>
+                    <Link to={selectedRoles?.length > 6 ? "/assign-roles" : "#"} className={`flex flex-col items-center text-center ${selectedRoles?.length > 6 ? 'bg-green-500' : 'bg-gray-200 cursor-auto'} rounded-full p-2`}>
+                        <IonIcon icon={arrowForward} className={`h-6 w-6 text-white`} />
                     </Link>
                 </div>
             </footer>
