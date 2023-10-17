@@ -1,11 +1,11 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import React, { useEffect, useState } from 'react'
 import { db } from '../../db';
-import AddRoleModal from '../components/AddRoleModal';
 import { Link } from 'react-router-dom';
 import { IonIcon } from '@ionic/react';
 import { add, addOutline, arrowForward } from 'ionicons/icons';
 import Role from '../components/Role';
+import AddRoleCmp from '../components/AddRoleCmp';
 
 export default function RolesSelection() {
     const [modalShow, setModalShow] = useState(false);
@@ -23,7 +23,7 @@ export default function RolesSelection() {
             <div className='grid grid-cols-12 gap-4 py-[80px] px-5'>
                 {selectedRoles?.map((role) => <Role key={role.id} role={role} buttonType={"delete"} />)}
             </div>
-            <AddRoleModal show={modalShow} hide={() => { setModalShow(false); }} />
+            <AddRoleCmp show={modalShow} hide={() => { setModalShow(false); }} />
             <footer className="fixed bottom-0 w-full h-16 bg-blue-700">
                 <div className="flex justify-around items-center h-full">
                     <button className="flex flex-col items-center text-center bg-blue-500 rounded-full p-2" onClick={() => setModalShow(true)}>

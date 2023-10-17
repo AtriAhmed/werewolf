@@ -77,15 +77,15 @@ db.on('populate', () => {
         },
         {
             id: 11,
-            name: "Alien",
-            repeat: false,
-            image: "alien.jpg"
-        },
-        {
-            id: 12,
             name: "Ancien",
             repeat: false,
             image: "ancien.jpg"
+        },
+        {
+            id: 12,
+            name: "Alien",
+            repeat: false,
+            image: "alien.jpg"
         },
         {
             id: 13,
@@ -104,6 +104,96 @@ db.on('populate', () => {
             name: "Ours",
             repeat: false,
             image: "ours.jpg"
+        },
+        {
+            id: 16,
+            name: "Ange",
+            repeat: false,
+            image: "ange.jpg"
+        },
+        {
+            id: 17,
+            name: "Detective",
+            repeat: false,
+            image: "detective.jpg"
+        },
+        {
+            id: 18,
+            name: "Berger",
+            repeat: false,
+            image: "berger.jpg"
+        },
+        {
+            id: 19,
+            name: "Loup Rouge",
+            repeat: false,
+            image: "loup-rouge.jpg"
+        },
+        {
+            id: 20,
+            name: "Pyromane",
+            repeat: false,
+            image: "pyromane.jpg"
+        },
+        {
+            id: 21,
+            name: "Fils de lune",
+            repeat: false,
+            image: "fils-de-lune.jpg"
+        },
+        {
+            id: 22,
+            name: "Juge",
+            repeat: false,
+            image: "juge.jpg"
+        },
+        {
+            id: 23,
+            name: "Loup Blanc",
+            repeat: false,
+            image: "loup-blanc.jpg"
+        },
+        {
+            id: 24,
+            name: "Enfant sauvage",
+            repeat: false,
+            image: "enfant-sauvage.jpg"
+        },
+        {
+            id: 25,
+            name: "Joueur de flute",
+            repeat: false,
+            image: "joueur-de-flute.jpg"
+        },
+        {
+            id: 26,
+            name: "Capitain",
+            repeat: false,
+            image: "capitain.jpg"
+        },
+        {
+            id: 27,
+            name: "Idiot",
+            repeat: false,
+            image: "idiot.jpg"
+        },
+        {
+            id: 28,
+            name: "Voleur",
+            repeat: false,
+            image: "voleur.jpg"
+        },
+        {
+            id: 29,
+            name: "Servante",
+            repeat: false,
+            image: "servante.jpg"
+        },
+        {
+            id: 30,
+            name: "Petite Fille",
+            repeat: false,
+            image: "petite-fille.jpg"
         },
     ]);
 });

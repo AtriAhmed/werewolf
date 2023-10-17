@@ -6,9 +6,9 @@ export default function Layout() {
     return (
         <>
             <Navbar />
-            <div className='relative z-0'>
+            
             <Outlet />
-            </div>
+            
         </>
     )
 }

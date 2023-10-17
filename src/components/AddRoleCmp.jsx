@@ -4,8 +4,9 @@ import { db } from '../../db';
 import { debounce } from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 import Role from './Role';
+import Modal from './Modal';
 
-export default function AddRoleCmp() {
+export default function AddRoleCmp({show,hide}) {
 
     const [selectedRoles, setSelectedRoles] = useState([])
 
@@ -44,6 +45,8 @@ export default function AddRoleCmp() {
     }
 
     return (
-        <div className='grid grid-cols-12'>{roles?.map((role, index) => <Role role={role} buttonType={canAdd(role) ? "add" : ""} addRole={()=>addRole(role)}  />)}</div>
+        <Modal show={show} hide={hide} >
+            <div className='grid grid-cols-12 gap-2 w-full max-h-[80vh] max-w-[80vw] p-2'>{roles?.map((role, index) => <Role key={role.id} role={role} textStyle='text-black' buttonType={canAdd(role) ? "add" : ""} addRole={()=>addRole(role)}  />)}</div>
+        </Modal>
     )
 }

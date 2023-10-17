@@ -55,7 +55,7 @@ export default function AssignRoles() {
         <div className='h-[100vh]'>
             <div className='flex flex-col gap-4 justify-center items-center h-full'>
             
-            <Role role={mixedRoles ? mixedRoles[currentRole] : {}} hidden={!visible} imgWidth={300} imgHeight={300} fontSize="xl"/>
+            <Role role={mixedRoles ? mixedRoles[currentRole] : {}} hidden={!visible} imgWidth={300} imgHeight={300} textStyle="text-xl"/>
               
                 
             <div className='flex justify-center items-center'>
