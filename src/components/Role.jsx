@@ -12,7 +12,8 @@ export default function Role({ role, hidden, buttonType, addRole,imgHeight,imgWi
     >
       <img
         src={ hidden ? "images/hidden.jpg" : "images/roles/" + role.image}
-        className={`w-[${imgWidth ? imgWidth+'px' : '100%' }] h-[${imgHeight ? imgHeight+'px' : '100%' }] rounded`}
+        style={{width:`${imgWidth ? imgWidth+'px' : '100%' }`,height:`${imgHeight ? imgHeight+'px' : '100%' }`}}
+        className={`rounded`}
       />
             <div className="font-bold">{role.player && showPlayerName ? role.player : ""}</div>
       <div className={`font-bold ${textStyle}`} >{hidden ? "?????????????" : role.name}</div>

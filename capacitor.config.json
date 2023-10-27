@@ -1,0 +1,8 @@
+{
+  "appId": "com.ahmedatri.werewolf",
+  "appName": "Werewolf",
+  "webDir": "build",
+  "server": {
+    "androidScheme": "https"
+  }
+}
